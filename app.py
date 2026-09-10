@@ -9,7 +9,7 @@ from flask import Flask, jsonify, request
 APP_ROOT = Path(__file__).resolve().parent
 DEFAULT_VERSION = (APP_ROOT / "VERSION").read_text(encoding="utf-8").strip()
 APPLICATION_VERSION = os.getenv("APPLICATION_VERSION", DEFAULT_VERSION)
-MODEL_VERSION = os.getenv("MODEL_VERSION", "model-6")
+MODEL_VERSION = os.getenv("MODEL_VERSION", "model-7")
 GIT_COMMIT = os.getenv("GIT_COMMIT", "unknown")
 
 app = Flask(__name__)
