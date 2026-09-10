@@ -12,9 +12,9 @@ This record distinguishes verified results from configuration that requires exte
 ## GitHub verification
 
 - Pull request CI passed for PRs #1 through #4. CI contains tests only; it has no package or deployment permission.
-- GitHub Environments `staging` and `production` exist.
-- The `v1.2.0` release workflow tested and built/published the versioned and `latest` GHCR image successfully.
-- `v1.2.0` staging failed because no staging host, user, or SSH key secret has been configured. The health gate and production job were consequently not reached.
+- GitHub Environments `staging` and `production` exist. Production has GitHub's required-reviewer protection enabled for the repository owner.
+- Both `v1.2.0` and `v1.3.0` release workflows passed their test and build/publish jobs, producing versioned images plus `latest` in GHCR.
+- Both staging jobs stopped at SSH deployment because no staging host, user, or SSH key secret has been configured. The health gate and production job were consequently not reached.
 
 ## Pending external evidence
 
